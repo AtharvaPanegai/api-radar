@@ -1,9 +1,9 @@
-const { extractEndpoints } = require("../utils/extractEndPoints");
+const extractEndpoints = require("../utils/extractEndPoints")
 
 // this function will be exported to the end user's app to collect apis
 // TODO : connect it with radar-api to show collected api points in UI when the user logs in
 // TODO : add the feature to accept the apiKey as well for verification of app
-export const collectApiEndpoints = (app) => {
+const collectApiEndpoints = (app) => {
   const endpoints = extractEndpoints(app._router.stack);
 
   // Remove duplicate endpoints and clean up paths
@@ -18,3 +18,5 @@ export const collectApiEndpoints = (app) => {
 
   return uniqueEndpoints;
 };
+
+module.exports = collectApiEndpoints;

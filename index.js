@@ -1,5 +1,5 @@
-import { collectApiEndpoints } from "./src/controllers/collectApiEndpoints";
+const collectApiEndpoints = require("./src/controllers/collectApiEndpoints");
 
-export default {
-  collectApiEndpoints,
-};
+module.exports = {
+  collectApiEndpoints
+}
