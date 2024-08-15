@@ -15,8 +15,6 @@ const apiCollector = (app) => {
     const logData = {
       method: req.method,
       path: req.originalUrl,
-      headers: req.headers,
-      params: req.params,
     };
 
     res.on('finish', () => {
