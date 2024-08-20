@@ -11,7 +11,6 @@ const _sendApiLogToRadar = async (apiKey,apiLogInfo) =>{
     }
 
     try{
-        console.log("radar options =====>",JSON.stringify(radarOptions));
         await axios(radarOptions);
     }catch(err){
         console.log(`Error || Error from API-RADAR`);
