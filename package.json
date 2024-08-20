@@ -6,12 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtharvaPanegai/api-radar.git"
   },
+  "keywords": [
+    "api-radar",
+    "api-health-monitor",
+    "api health",
+    "api monitoring"
+  ],
   "author": "Atharva Panegai",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/AtharvaPanegai/api-radar/issues"
+  },
+  "homepage": "https://github.com/AtharvaPanegai/api-radar#readme"
 }
