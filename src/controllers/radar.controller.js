@@ -1,7 +1,7 @@
-const { default: axios } = require("axios");
 const collectApiEndpoints = require("./collectApiEndpoints");
+const { _sendApiLogToRadar } = require("../utils/gateway.utils");
 
-const apiCollector = (app) => {
+const AddRadar = (app,projectId,apiKey) => {
   app.use((req, res, next) => {
     if (!req.app.locals.apiEndpoints) {
       req.app.locals.apiEndpoints = collectApiEndpoints(app);
@@ -15,6 +15,7 @@ const apiCollector = (app) => {
     const logData = {
       method: req.method,
       path: req.originalUrl,
+      projectId : projectId
     };
 
     res.on('finish', () => {
@@ -24,10 +25,7 @@ const apiCollector = (app) => {
       logData.statusCode = res.statusCode;
       logData.responseTime = `${durationInMs.toFixed(3)} ms`;
 
-      console.log(logData);
-
-      // Send log data to radar-api
-      // axios.post("",logData); //fire and forget
+      _sendApiLogToRadar(apiKey,logData);
     });
 
     // return logData;
@@ -35,4 +33,4 @@ const apiCollector = (app) => {
   });
 };
 
-module.exports = apiCollector;
+module.exports = AddRadar;

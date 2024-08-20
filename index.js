@@ -1,7 +1,6 @@
 const collectApiEndpoints = require("./src/controllers/collectApiEndpoints");
-const apiCollector = require("./src/controllers/apiCollector");
+const AddRadar = require("./src/controllers/radar.controller");
 
 module.exports = {
-  apiCollector,
-  collectApiEndpoints
+  AddRadar
 }
