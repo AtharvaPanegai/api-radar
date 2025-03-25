@@ -1,6 +1,6 @@
 {
   "name": "api-radar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "This package collects the endpoints of all the apis present in the express app ",
   "main": "index.js",
   "scripts": {
