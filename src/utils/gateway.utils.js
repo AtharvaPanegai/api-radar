@@ -2,7 +2,7 @@ const axios = require("axios");
 const _sendApiLogToRadar = async (apiKey,apiLogInfo) =>{
     let radarOptions = {
         method : "post",
-        url: 'https://api-radar-api.onrender.com/api/v1/radar/monitorapi', 
+        url: 'https://api.apigaruda.com/api/v1/radar/monitorapi', 
         headers : {
             apiKey : apiKey,
             'Content-Type': 'application/json',
